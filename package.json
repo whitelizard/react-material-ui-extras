@@ -1,6 +1,6 @@
 {
   "name": "react-material-ui-extras",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Extra material-ui components",
   "main": "index.js",
   "scripts": {
