@@ -3,7 +3,7 @@ import muiThemeable from 'material-ui/styles/muiThemeable';
 import FontIcon from 'material-ui/FontIcon';
 
 const iconStyle = {
-  display: 'inline',
+  display: 'inline-block',
   marginRight: 10,
   paddingTop: 3,
   verticalAlign: '-32%',
@@ -12,9 +12,9 @@ const iconStyle = {
 class MuiIcon extends React.PureComponent {
 
   static propTypes = {
-    // icon: React.PropTypes.string.isRequired,
+    icon: React.PropTypes.string.isRequired,
     muiTheme: React.PropTypes.object.isRequired, // eslint-disable-line
-    // color: React.PropTypes.string,
+    color: React.PropTypes.string,
     style: React.PropTypes.object, // eslint-disable-line
     plain: React.PropTypes.bool,
   };
