@@ -44,7 +44,7 @@
     "rimraf": "^2.5.4"
   },
   "peerDependencies": {
-    "material-ui": "^0.16.7",
+    "material-ui": "^0.17.0",
     "react": "^15.4.2",
     "react-redux": "^5.0.3"
   }
