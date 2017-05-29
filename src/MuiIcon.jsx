@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import muiThemeable from 'material-ui/styles/muiThemeable';
 import FontIcon from 'material-ui/FontIcon';
 
@@ -10,13 +11,12 @@ const iconStyle = {
 };
 
 class MuiIcon extends React.PureComponent {
-
   static propTypes = {
-    icon: React.PropTypes.string.isRequired,
-    muiTheme: React.PropTypes.object.isRequired, // eslint-disable-line
-    color: React.PropTypes.string,
-    style: React.PropTypes.object, // eslint-disable-line
-    plain: React.PropTypes.bool,
+    icon: PropTypes.string.isRequired,
+    muiTheme: PropTypes.object.isRequired, // eslint-disable-line
+    color: PropTypes.string,
+    style: PropTypes.object, // eslint-disable-line
+    plain: PropTypes.bool,
   };
 
   static defaultProps = {

@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import Toggle from 'material-ui/Toggle';
 import FontIcon from 'material-ui/FontIcon';
 import { ListItem } from 'material-ui/List';
@@ -13,10 +14,9 @@ const toggleStyle = {
 };
 
 export default class ListItemToggle extends React.PureComponent {
-
   static propTypes = {
     primaryText: PropTypes.node,
-    icon: PropTypes.any,
+    icon: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     onToggle: PropTypes.func.isRequired,
     toggled: PropTypes.bool.isRequired,
     children: PropTypes.node.isRequired,
@@ -25,7 +25,7 @@ export default class ListItemToggle extends React.PureComponent {
   static defaultProps = {
     primaryText: '',
     icon: '',
-  }
+  };
 
   render() {
     const { primaryText, icon, onToggle, toggled, children, ...rest } = this.props;
@@ -42,16 +42,13 @@ export default class ListItemToggle extends React.PureComponent {
           style={{ position: 'relative' }}
           {...rest}
         >
-          <Toggle
-            toggled={toggled}
-            iconStyle={toggleStyle}
-          />
+          <Toggle toggled={toggled} iconStyle={toggleStyle} />
         </ListItem>
-        {toggled && children &&
+        {toggled &&
+          children &&
           <div style={childStyle}>
             {children}
-          </div>
-        }
+          </div>}
       </div>
     );
   }
