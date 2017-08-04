@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 const withContentSize = (MyComponent, drawerThreshold) => {
   class WithContentSize extends React.Component {
     static propTypes = {
-      muiTheme: PropTypes.objectOf(PropTypes.object).isRequired,
+      muiTheme: PropTypes.objectOf(PropTypes.any).isRequired,
       windowSize: PropTypes.objectOf(PropTypes.number).isRequired,
     };
 
